@@ -18,7 +18,7 @@ function parseBundle(bundlePath) {
   });
 
   const walkState = {
-    locations: null
+    locations: bundlePath.match(/bundle\.app/gi) ? {} : null
   };
 
   walk.recursive(
